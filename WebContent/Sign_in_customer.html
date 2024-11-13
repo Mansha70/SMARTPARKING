@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PARK EASE - Sign In</title>
+
+    <link href="css/style3.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/wow.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script>
+        new WOW().init();
+        
+        // Show popup and redirect after successful login
+        function showSuccessMessage() {
+            alert("Sign-in successful!");
+            window.location.href = 'index.html';  // Redirect to the homepage
+            return false;  // Prevent form submission for demonstration
+        }
+    </script>
+
+    <style>
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 100%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body id="body">
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo pull-left animated wow fadeInLeft">
+                <img src="logo.jpg" height="80px" width="65px" alt="" title="">
+                <p style="font-style:italic;color:white;font-size:12pt;" class="animated wow fadeInLeft" data-wow-delay=".2s"></p>
+            </div>
+
+            <nav class="pull-right">
+                <ul class="list-unstyled">
+                    <li class="animated wow fadeInLeft" data-wow-delay="0s"><a href="index.html">Home</a></li>
+                    <li class="animated wow fadeInLeft" data-wow-delay=".2s"><a href="https://www.google.com/maps/d/u/0/embed?mid=1To41iSyudMsmKo-czsEnGxNHo6ZaTF8&ehbc=2E312F&noprof=1">MAPS</a></li>
+                    <li class="animated wow fadeInLeft" data-wow-delay=".2s"><a href="#gallery">Gallery</a></li>
+                    <li class="animated wow fadeInLeft" data-wow-delay=".2s"><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header Section -->
+
+    <!-- Sign In Section -->
+    <div id="abc">
+        <h3>PARK EASE</h3>
+        <p>Sign In</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="form_bg">
+                <form action="/sign-in" method="POST">  <!-- Action should match the servlet mapping -->
+					<label for="uname">USERNAME:</label>
+					<input type="text" name="uname" placeholder="Enter your username" required>
+					<br><br>
+				
+					<label for="pwd">PASSWORD:</label>
+					<input type="password" name="pwd" placeholder="Enter your password" required>
+					<br><br>
+				
+					<input type="submit" value="Sign In" class="new">
+				</form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
